@@ -13,16 +13,45 @@
   }
   header {
     background: #fdf3ec;
-    padding: 24px 6vw;
+    padding: 20px 6vw;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #f0ddd0;
   }
+  header nav {
+    display: flex;
+    gap: 28px;
+  }
+  header nav a {
+    color: #c8283c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
   header .brand {
-    font-size: 28px;
+    font-size: 26px;
     color: #c8283c;
     font-weight: bold;
     letter-spacing: 0.5px;
+    text-align: center;
+  }
+  header .cta {
+    background: #c8283c;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  @media (max-width: 640px) {
+    header { flex-wrap: wrap; gap: 12px; }
+    header nav { order: 1; }
+    header .brand { order: 0; width: 100%; }
+    header .cta { order: 2; }
   }
   main { max-width: 1100px; margin: 0 auto; padding: 0 6vw; }
   .shot {
@@ -61,7 +90,12 @@
 <body>
 
 <header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+  </nav>
   <div class="brand">The Legacy Drop</div>
+  <a href="#" class="cta">Start an Order</a>
 </header>
 
 <main>
